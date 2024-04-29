@@ -1,0 +1,45 @@
+openapi: "3.0.0"
+info:
+  title: Simple API
+  version: 2.0.0
+paths:
+  /api/v0:
+    post:
+      summary: Custom users query
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                query:
+                  type: string
+              example:
+                query: "SELECT ?subject ?predicate ?object WHERE {?subject ?predicate ?object} LIMIT 1"
+      responses:
+        '200':
+          description: |-
+            200 response
+          content:
+            application/json:
+              examples:
+                foo:
+                  value: |
+                    [
+                      {
+                        "object": {
+                          "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                          "type": "literal",
+                          "value": "2024-01-26T00:00:00.000Z"
+                        },
+                        "predicate": {
+                          "type": "uri",
+                          "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#release-date"
+                        },
+                        "subject": {
+                          "type": "uri",
+                          "value": "http://d3fend.mitre.org/ontologies/d3fend.owl"
+                        }
+                      }
+                    ]
+                       
