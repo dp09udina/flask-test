@@ -1,0 +1,7 @@
+{
+    "database": {
+        "engine": "blazegraph",
+        "sparql_endpoint": "http://blazegraph:9999/blazegraph/sparql"
+    },
+    "debug": false
+}
