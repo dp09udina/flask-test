@@ -18,3 +18,9 @@
 
 По умолчанию приложение запускается на порту 5000.
 Порт указывается в .env. Пример в .env_test
+
+Файл конфигурации с подключением БД: [config.json](https://github.com/dp09udina/flask-test/blob/main/test-app/config/config.json)
+
+## API
+
+Описание api: [openapi.yaml](https://github.com/dp09udina/flask-test/blob/main/openapi/openapi.yaml)
