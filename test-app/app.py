@@ -18,6 +18,6 @@ app.register_blueprint(api_v0)
 if __name__ == "__main__":
     app.run(
         debug=env.str("DEBUG", default="True"),
-        host="0.0.0.0",
+        host=env.str("HOST", default="0.0.0.0"),
         port=env.str("PORT", default="5000"),
     )
